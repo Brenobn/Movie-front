@@ -5,21 +5,23 @@ import { Input } from "../Input";
 export function Header() {
   return(
     <Container>
-      <h1>RocketMovies</h1>
+      <div className="header-wrapper">
+        <h1>RocketMovies</h1>
 
-      <Input />
+        <Input placeholder="Pesquisar pelo título" />
 
-      <Profile>
-        <img 
-          src="https://github.com/Brenobn.png" 
-          alt="Foto do usuário github" 
-        />
+        <Profile>
+          <div className="text">
+            <strong>Breno Braga</strong>
+            <a href="#">sair</a>
+          </div>
 
-        <div>
-          <strong>Breno Braga</strong>
-          <a href="#">sair</a>
-        </div>
-      </Profile>
+          <img 
+            src="https://github.com/Brenobn.png" 
+            alt="Foto do usuário github" 
+          />
+        </Profile>
+      </div>
 
     </Container>
   );
