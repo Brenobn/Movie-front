@@ -18,6 +18,16 @@ export const Container = styled.div`
     font-weight: 700;
   }
 
+  > p {
+    color: ${({ theme }) => theme.COLORS.GRAY_300};
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .stars {
     display: flex;
     flex-direction: row;
