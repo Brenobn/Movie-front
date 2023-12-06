@@ -1,6 +1,24 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  max-width: 1366px;
+  max-height: 1024px;
+  
+  display: grid;
+  grid-template-rows: 116px auto;
+  grid-template-areas:
+  "header"
+  "content";
+
+  .Sections {
+      display: inline-flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      width: 100%;
+    }
+
   .headofpage {
     display: flex;
     justify-content: space-between;
@@ -22,7 +40,9 @@ export const Container = styled.div`
       align-items: center;
       gap: 8px;
       flex-shrink: 0;
-
+      padding: 30px;
+      
+      margin: 13px 32px 13px 52px;
     }
   }
 `;
