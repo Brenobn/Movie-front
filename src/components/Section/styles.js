@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  width: 85%;
+  width: 77%;
   padding: 32px;
   flex-direction: column;
+  margin-right: 20px;
   align-items: flex-start;
   gap: 15px;
 
