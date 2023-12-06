@@ -19,11 +19,17 @@ export const Container = styled.div`
       width: 100%;
     }
 
+    .TagsWrapper {
+      display: flex;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
   .headofpage {
     display: flex;
     justify-content: space-between;
-    gap: 746px;
-    margin: 50px 106px 40px 123px;
+    gap: 710px;
+    margin: 50px 170px 40px 190px;
 
 
     > h1 {
