@@ -52,6 +52,12 @@ export const ContentContainer = styled.div`
     font-weight: 500; 
   }
 
+  .TagWrapper {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
   p {
     color: ${({ theme }) => theme.COLORS.WHITE};
     text-align: justify;
