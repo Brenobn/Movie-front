@@ -1,6 +1,7 @@
 import { GoArrowLeft } from 'react-icons/go';
 import { PiCamera } from 'react-icons/pi';
 import { MdOutlinePersonOutline, MdOutlineMail } from 'react-icons/md';
+import { HiOutlineLockClosed } from 'react-icons/hi2'
 
 import { Container, Header } from "./styles";
 
@@ -29,8 +30,8 @@ export function Profile() {
       <form>
         <Input icon={MdOutlinePersonOutline} placeholder="Nome"/>
         <Input icon={MdOutlineMail} placeholder="E-mail" />
-        <Input placeholder="Senha atual" />
-        <Input placeholder="Nova senha" />
+        <Input icon={HiOutlineLockClosed} placeholder="Senha atual" />
+        <Input icon={HiOutlineLockClosed} placeholder="Nova senha" />
         <Button title="Salvar" />
       </form>
     </Container>
