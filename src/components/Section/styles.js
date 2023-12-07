@@ -33,5 +33,25 @@ export const Container = styled.div`
     display: flex;
     flex-direction: row;
     gap: 6px;
+
+    > svg:nth-child(1) {
+      color: ${({ theme }) => theme.COLORS.SALMON};
+    }
+
+    > svg:nth-child(2) {
+      color: ${({ theme }) => theme.COLORS.SALMON};
+    }
+
+    > svg:nth-child(3) {
+      color: ${({ theme }) => theme.COLORS.SALMON};
+    }
+
+    > svg:nth-child(4) {
+      color: ${({ theme }) => theme.COLORS.SALMON};
+    }
+
+    > svg:nth-child(5) {
+      color: ${({ theme }) => theme.COLORS.SALMON};
+    }
   }
 `;
