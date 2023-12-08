@@ -51,6 +51,17 @@ export const ContentContainer = styled.div`
     align-self: stretch;
   }
 
+  .Section {
+    h4 {
+      color: ${({ theme }) => theme.COLORS.GRAY_300};
+      font-size: 20PX;
+      font-family: 'Roboto Slab', sans-serif;
+      font-weight: 400;
+
+      margin-bottom: 24px;
+    }
+  }
+
   textarea {
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
     color: ${({ theme }) => theme.COLORS.WHITE};
