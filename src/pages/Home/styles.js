@@ -16,7 +16,8 @@ export const Container = styled.div`
       flex-direction: column;
       align-items: center;
       gap: 24px;
-      width: 100%;
+      margin: 40px auto;
+      width: 90%;
     }
 
     .TagsWrapper {
@@ -25,11 +26,12 @@ export const Container = styled.div`
       margin-top: 15px;
     }
 
-  .headofpage {
-    display: flex;
-    justify-content: space-between;
-    gap: 710px;
-    margin: 50px 170px 40px 190px;
+    .headofpage {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 710px;
+      margin: 50px auto;
 
 
     > h1 {
@@ -47,8 +49,6 @@ export const Container = styled.div`
       gap: 8px;
       flex-shrink: 0;
       padding: 30px;
-      
-      margin: 13px 32px 13px 52px;
     }
   }
 `;

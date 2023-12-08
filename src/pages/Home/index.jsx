@@ -15,7 +15,10 @@ export function Home() {
       <div className="headofpage">
         <h1>Meus filmes</h1>
 
-        <Button icon={FiPlus} title="Adicionar filme" />
+        <Button 
+          icon={FiPlus} 
+          title="Adicionar filme" 
+        />
 
       </div>
 
