@@ -5,6 +5,7 @@ import { Container, ContentContainer } from "./styles";
 
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
+import { Button } from '../../components/Button';
 
 
 export function New() {
@@ -34,6 +35,10 @@ export function New() {
               <GoPlus />
             </button>
           </div>
+        </div>
+        <div className="buttons">
+          <Button title="Excluir filme" />
+          <Button title="Salvar alterações" />
         </div>
       </ContentContainer>
     </Container>

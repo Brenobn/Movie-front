@@ -113,5 +113,18 @@ export const ContentContainer = styled.div`
       }
     }
   }
+
+  .buttons {
+      display: flex;
+      width: 1113px;
+      align-items: flex-start;
+      gap: 40px;
+      align-self: stretch;
+
+      > button:nth-child(1) {
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+        color: ${({ theme }) => theme.COLORS.SALMON};
+      }
+    }
 `;
 
