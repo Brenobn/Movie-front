@@ -44,13 +44,21 @@ export const ContentContainer = styled.div`
     }
   }
 
+  .StarWrapper {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
 
-  h1 {
-    color: ${({ theme }) => theme.COLORS.WHITE};
-    font-family: 'Roboto Slab', sans-serif;
-    font-size: 36px;
-    font-weight: 500; 
+    h1 {
+      margin-right: 19px;
+      color: ${({ theme }) => theme.COLORS.WHITE};
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 36px;
+      font-weight: 500; 
+    }
   }
+
+
 
   .TagWrapper {
     display: inline-flex;

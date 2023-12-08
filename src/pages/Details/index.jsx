@@ -1,4 +1,5 @@
 import { GoArrowLeft } from 'react-icons/go';
+import { MdStar, MdStarBorder } from 'react-icons/md';
 
 import { Container, ContentContainer } from "./styles";
 
@@ -14,7 +15,14 @@ export function Details() {
           <GoArrowLeft />
           <a href="#">Voltar</a>
         </div>
-        <h1>Interestellar</h1>
+        <div className='StarWrapper'>
+          <h1>Interestellar</h1>
+          <MdStar />
+          <MdStar />
+          <MdStar />
+          <MdStar />
+          <MdStarBorder />
+        </div>
         <div className='TagWrapper'>
           <Tag text="Ficção Científica" />
           <Tag text="Drama" />
