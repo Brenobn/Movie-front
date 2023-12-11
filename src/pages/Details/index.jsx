@@ -5,6 +5,7 @@ import { Container, ContentContainer } from "./styles";
 
 import { Header } from "../../components/Header";
 import { Tag } from "../../components/Tag";
+import { ButtonText } from '../../components/ButtonText';
 
 export function Details() {
   return(
@@ -13,7 +14,7 @@ export function Details() {
       <ContentContainer>
         <div className='WayBack'>
           <GoArrowLeft />
-          <a href="#">Voltar</a>
+          <ButtonText title="Voltar" /> 
         </div>
         <div className='StarWrapper'>
           <h1>Interestellar</h1>
