@@ -19,7 +19,7 @@ export const Container = styled.header`
 
   .header-wrapper {
     display: flex;
-    width: 1366px;
+    width: 100%;
     padding: 24px 123px;
     align-items: center;
     gap: 64px;
