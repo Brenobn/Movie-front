@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 893px;
+  
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
   display: grid;
@@ -10,24 +10,29 @@ export const Container = styled.div`
   "header"
   "content";
 
+  > main {
+    grid-area: content;
+    overflow-y: auto;
+
+    height: calc(100vh - 116px);
+    
+    width: 100%;
+  }
 `;
 
-export const ContentContainer = styled.div`
+export const Content = styled.div`
   max-width: 1137px;
-  max-height: 581px;
 
   margin: 40px auto;
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
-  display: inline-flex;
-  padding-right: 24px;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 40px;
 
   .WayBack {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 8px;
 
@@ -57,8 +62,6 @@ export const ContentContainer = styled.div`
       font-weight: 500; 
     }
   }
-
-
 
   .TagWrapper {
     display: inline-flex;
