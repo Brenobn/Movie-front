@@ -9,6 +9,7 @@ export default {
     SALMON: "#FF859B",
 
     GRAY_100: "#E5E5E5",
+    GRAY_110: "#CAC4CF",
     GRAY_200: "#948F99",
     GRAY_300: "#999591",
     GRAY_400: "#3E3B47",
