@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+import backgroundImg from '../../assets/background.png';
 
-  width: 340px;
+export const Container = styled.div`
   height: 100vh;
 
   background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
@@ -44,14 +44,21 @@ export const Form = styled.form`
     margin-bottom: 48px;
   }
 
-  .InputWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
   > Button {
     margin-top: 24px;
     margin-bottom: 42px;
   }
+`;
+
+export const InputWrapper = styled.div `
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+`;
+
+export const Background = styled.div`
+  flex: 1;
+  background: url(${backgroundImg}) no-repeat center;
+  background-size: cover;
 `;

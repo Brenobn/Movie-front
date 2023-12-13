@@ -1,4 +1,4 @@
-import { Container, Form } from "./styles";
+import { Background, Container, Form, InputWrapper } from "./styles";
 
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
@@ -16,7 +16,7 @@ export function SignIn() {
 
         <h2>Faça seu login</h2>
 
-        <div className="InputWrapper">
+        <InputWrapper>
           <Input 
             placeholder="E-mail"
             type="text"
@@ -28,11 +28,13 @@ export function SignIn() {
             type="password"
             icon={FiLock}
           />
-        </div>
+        </InputWrapper>
 
         <Button title="Entrar" />
         <ButtonText  title="Criar conta"/> 
       </Form>
+
+      <Background />
 
     </Container>
   );
