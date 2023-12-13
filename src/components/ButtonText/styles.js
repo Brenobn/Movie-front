@@ -6,4 +6,7 @@ export const Container = styled.button`
 
   border: none;
   font-size: 16px;
+
+  display: inline-flex;
+  gap: 8px;
 `;
