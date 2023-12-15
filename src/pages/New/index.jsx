@@ -1,45 +1,55 @@
-import { GoArrowLeft, GoPlus } from 'react-icons/go';
-import { IoIosClose } from 'react-icons/io';
+import { Link } from "react-router-dom";
 
-import { Container, ContentContainer } from "./styles";
+import { GoArrowLeft, GoPlus } from "react-icons/go";
+import { IoIosClose } from "react-icons/io";
+
+import {
+  Container,
+  ContentContainer,
+  WayBack,
+  Title,
+  Col2,
+  Section,
+  Children,
+  Buttons,
+} from "./styles";
 
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
-import { Button } from '../../components/Button';
-
+import { Button } from "../../components/Button";
 
 export function New() {
-  return(
+  return (
     <Container>
       <Header />
       <ContentContainer>
-        <div className='WayBack'>
+        <WayBack>
           <GoArrowLeft />
-          <a href="#">Voltar</a>
-        </div>
-        <h1>Novo filme</h1>
-        <div className='Col2'>
+          <Link to="/">Volar</Link>
+        </WayBack>
+        <Title>Novo filme</Title>
+        <Col2>
           <Input placeholder="Título" />
           <Input placeholder="Sua nota (de 0 a 5)" />
-        </div>
-        <textarea placeholder='Observações'></textarea>
-        <div className="Section">
+        </Col2>
+        <textarea placeholder="Observações"></textarea>
+        <Section>
           <h4>Marcadores</h4>
-          <div className='children'>
+          <Children>
             <button>
               React
-              <IoIosClose size={24}/>
+              <IoIosClose size={24} />
             </button>
             <button>
               Novo marcador
               <GoPlus />
             </button>
-          </div>
-        </div>
-        <div className="buttons">
+          </Children>
+        </Section>
+        <Buttons>
           <Button title="Excluir filme" />
           <Button title="Salvar alterações" />
-        </div>
+        </Buttons>
       </ContentContainer>
     </Container>
   );
