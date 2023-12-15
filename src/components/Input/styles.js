@@ -10,22 +10,22 @@ export const Container = styled.div`
 
   border-radius: 10px;
 
-  > input {
-    width: 100%;
-    height: 56px;
-
-    padding: 19px 24px;
-
-    color: ${({ theme }) => theme.COLORS.WHITE};
-    background: transparent;
-    border: 0;
-
-    &:placeholder {
-      color: ${({ theme }) => theme.COLORS.GRAY_200};
-    }
-  }
-
   > svg {
     margin-left: 16px;
+  }
+`;
+
+export const InputChildren = styled.input`
+  width: 100%;
+  height: 56px;
+
+  padding: 19px 24px;
+
+  color: ${({ theme }) => theme.COLORS.WHITE};
+  background: transparent;
+  border: 0;
+
+  &:placeholder {
+    color: ${({ theme }) => theme.COLORS.GRAY_200};
   }
 `;
