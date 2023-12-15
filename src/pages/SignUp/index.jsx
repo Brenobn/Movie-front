@@ -1,4 +1,12 @@
-import { Background, Container, Form, InputWrapper } from "./styles";
+import {
+  Background,
+  Container,
+  Form,
+  InputWrapper,
+  Title,
+  Paragraph,
+  Text,
+} from "./styles";
 
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
@@ -11,10 +19,10 @@ export function SignUp() {
   return (
     <Container>
       <Form>
-        <h1>RocketMovies</h1>
-        <p>Aplicação para acompanhar tudo que assistir.</p>
+        <Title>RocketMovies</Title>
+        <Paragraph>Aplicação para acompanhar tudo que assistir.</Paragraph>
 
-        <h2>Faça seu login</h2>
+        <Text>Faça seu login</Text>
 
         <InputWrapper>
           <Input placeholder="Nome" type="text" icon={FiUser} />
@@ -25,7 +33,7 @@ export function SignUp() {
         </InputWrapper>
 
         <Button title="Entrar" />
-        <ButtonText title="Voltar para login" icon={GoArrowLeft} />
+        <ButtonText title="Voltar para login" icon={GoArrowLeft} to="/" />
       </Form>
 
       <Background />
