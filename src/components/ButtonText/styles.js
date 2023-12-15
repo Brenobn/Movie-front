@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.button`
+import { Link } from "react-router-dom";
+
+export const Container = styled(Link)`
   background: none;
   color: ${({ theme }) => theme.COLORS.SALMON};
 
@@ -10,3 +12,9 @@ export const Container = styled.button`
   display: inline-flex;
   gap: 8px;
 `;
+
+// export const ButtonWithDefaultHref = styled.a.attrs({
+//   href: "###"
+// })
+
+// <ButtonWithDefaultHref /> // <a href="####"
