@@ -1,28 +1,36 @@
-import { Container, Profile } from "./styles";
+import {
+  Container,
+  Profile,
+  HeaderWrapper,
+  Text,
+  TextHeader,
+  Name,
+  LinkToGoOut,
+  ProfileImg,
+} from "./styles";
 
 import { Input } from "../Input";
 
 export function Header() {
-  return(
+  return (
     <Container>
-      <div className="header-wrapper">
-        <h1>RocketMovies</h1>
+      <HeaderWrapper>
+        <Text>RocketMovies</Text>
 
         <Input placeholder="Pesquisar pelo título" />
 
-        <Profile>
-          <div className="text">
-            <strong>Breno Braga</strong>
-            <a href="#">sair</a>
-          </div>
+        <Profile to="/profile">
+          <TextHeader>
+            <Name>Breno Braga</Name>
+            <LinkToGoOut href="#">sair</LinkToGoOut>
+          </TextHeader>
 
-          <img 
-            src="https://github.com/Brenobn.png" 
-            alt="Foto do usuário github" 
+          <ProfileImg
+            src="https://github.com/Brenobn.png"
+            alt="Foto do usuário github"
           />
         </Profile>
-      </div>
-
+      </HeaderWrapper>
     </Container>
   );
 }
