@@ -1,25 +1,27 @@
-import { GoArrowLeft } from 'react-icons/go';
-import { PiCamera } from 'react-icons/pi';
-import { MdOutlinePersonOutline, MdOutlineMail } from 'react-icons/md';
-import { HiOutlineLockClosed } from 'react-icons/hi2'
+import { Link } from "react-router-dom";
+
+import { GoArrowLeft } from "react-icons/go";
+import { PiCamera } from "react-icons/pi";
+import { MdOutlinePersonOutline, MdOutlineMail } from "react-icons/md";
+import { HiOutlineLockClosed } from "react-icons/hi2";
 
 import { Container, Header } from "./styles";
 
-import { Input } from '../../components/Input';
-import { Button } from '../../components/Button';
+import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
 
 export function Profile() {
-  return(
+  return (
     <Container>
       <Header>
         <div>
           <GoArrowLeft />
-          <a href="#">Voltar</a>
+          <Link to="/">Voltar</Link>
         </div>
 
         <div className="Picture">
           <img
-            src="https://github.com/Brenobn.png" 
+            src="https://github.com/Brenobn.png"
             alt="foto de usuario do github"
           />
           <div className="Icon">
@@ -28,7 +30,7 @@ export function Profile() {
         </div>
       </Header>
       <form>
-        <Input icon={MdOutlinePersonOutline} placeholder="Nome"/>
+        <Input icon={MdOutlinePersonOutline} placeholder="Nome" />
         <Input icon={MdOutlineMail} placeholder="E-mail" />
         <Input icon={HiOutlineLockClosed} placeholder="Senha atual" />
         <Input icon={HiOutlineLockClosed} placeholder="Nova senha" />
