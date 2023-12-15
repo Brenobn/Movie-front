@@ -1,65 +1,71 @@
-import { Container, Content } from "./styles";
+import {
+  Container,
+  Content,
+  ButtonHome,
+  Sections,
+  HeadOfPage,
+  Title,
+  TagsWrapper,
+} from "./styles";
 
 import { FiPlus } from "react-icons/fi";
- 
-import { Button } from "../../components/Button";
+
 import { Header } from "../../components/Header";
 import { Section } from "../../components/Section";
 import { Tag } from "../../components/Tag";
 
 export function Home() {
-  return(
+  return (
     <Container>
       <Header />
       <main>
         <Content>
-          <div className="headofpage">
-            <h1>Meus filmes</h1>
+          <HeadOfPage>
+            <Title>Meus filmes</Title>
 
-            <Button 
-              icon={FiPlus} 
-              title="Adicionar filme" 
-            />
+            <ButtonHome to="/new">
+              <FiPlus />
+              Adicionar filme
+            </ButtonHome>
+          </HeadOfPage>
 
-          </div>
-
-          <div className="Sections">
-            <Section 
+          <Sections>
+            <Section
               description={` Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma fazenda com sua família. Murphy, a filha de dez anos de Cooper, acredita que seu quarto está assombrado por um fantasma que tenta se comunicar com ela. Pai e filha descobrem que o "fantasma" é uma inteligência desconhecida que está enviando mensagens codificadas através de radiação gravitacional, deixando coordenadas em binário que os levam até uma instalação secreta da NASA liderada pelo professor John Brand.
               ...
-              Cooper e Amelia descobrem que 23 anos se passaram.`} 
+              Cooper e Amelia descobrem que 23 anos se passaram.`}
             >
-              <div className="TagsWrapper">
-              <Tag text="Ação" />
-              <Tag text="Aventura" />
-              <Tag text="Romance" />
-              </div>
+              <TagsWrapper>
+                <Tag text="Ação" />
+                <Tag text="Aventura" />
+                <Tag text="Romance" />
+              </TagsWrapper>
             </Section>
 
-            <Section 
+            <Section
               description={` Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma fazenda com sua família. Murphy, a filha de dez anos de Cooper, acredita que seu quarto está assombrado por um fantasma que tenta se comunicar com ela. Pai e filha descobrem que o "fantasma" é uma inteligência desconhecida que está enviando mensagens codificadas através de radiação gravitacional, deixando coordenadas em binário que os levam até uma instalação secreta da NASA liderada pelo professor John Brand.
               ...
-              Cooper e Amelia descobrem que 23 anos se passaram.`} 
+              Cooper e Amelia descobrem que 23 anos se passaram.`}
             >
-              <div className="TagsWrapper">
-              <Tag text="Ação" />
-              <Tag text="Aventura" />
-              <Tag text="Romance" />
-              </div>
+              <TagsWrapper>
+                <Tag text="Ação" />
+                <Tag text="Aventura" />
+                <Tag text="Romance" />
+              </TagsWrapper>
             </Section>
 
-            <Section 
+            <Section
               description={` Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma fazenda com sua família. Murphy, a filha de dez anos de Cooper, acredita que seu quarto está assombrado por um fantasma que tenta se comunicar com ela. Pai e filha descobrem que o "fantasma" é uma inteligência desconhecida que está enviando mensagens codificadas através de radiação gravitacional, deixando coordenadas em binário que os levam até uma instalação secreta da NASA liderada pelo professor John Brand.
               ...
-              Cooper e Amelia descobrem que 23 anos se passaram.`} 
+              Cooper e Amelia descobrem que 23 anos se passaram.`}
             >
-              <div className="TagsWrapper">
-              <Tag text="Ação" />
-              <Tag text="Aventura" />
-              <Tag text="Romance" />
-              </div>
+              <TagsWrapper>
+                <Tag text="Ação" />
+                <Tag text="Aventura" />
+                <Tag text="Romance" />
+              </TagsWrapper>
             </Section>
-          </div>
+          </Sections>
         </Content>
       </main>
     </Container>
