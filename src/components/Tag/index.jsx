@@ -1,9 +1,9 @@
-import { Container } from "./styles";
+import { Container, Paragraph } from "./styles";
 
 export function Tag({ text }) {
-  return(
+  return (
     <Container>
-      <p>{text}</p>
+      <Paragraph>{text}</Paragraph>
     </Container>
   );
 }

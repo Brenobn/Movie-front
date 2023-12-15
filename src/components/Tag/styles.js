@@ -7,13 +7,12 @@ export const Container = styled.div`
   gap: 8px;
   border-radius: 8px;
   background: ${({ theme }) => theme.COLORS.GRAY_500};
+`;
 
-  p {
-    color: ${({ theme }) => theme.COLORS.GRAY_100};
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-  }
-
+export const Paragraph = styled.p`
+  color: ${({ theme }) => theme.COLORS.GRAY_100};
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
 `;
