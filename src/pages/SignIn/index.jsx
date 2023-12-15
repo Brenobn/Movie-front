@@ -1,41 +1,39 @@
-import { Background, Container, Form, InputWrapper } from "./styles";
+import {
+  Background,
+  Container,
+  Form,
+  InputWrapper,
+  Title,
+  Text,
+  Paragraph,
+} from "./styles";
 
-import { Input } from '../../components/Input';
-import { Button } from '../../components/Button';
-import { ButtonText } from '../../components/ButtonText';
+import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
+import { ButtonText } from "../../components/ButtonText";
 
-import { FiMail, FiLock } from 'react-icons/fi';
+import { FiMail, FiLock } from "react-icons/fi";
 
 export function SignIn() {
-  return(
+  return (
     <Container>
       <Form>
+        <Title>RocketMovies</Title>
+        <Paragraph>Aplicação para acompanhar tudo que assistir.</Paragraph>
 
-        <h1>RocketMovies</h1>
-        <p>Aplicação para acompanhar tudo que assistir.</p>
-
-        <h2>Faça seu login</h2>
+        <Text>Faça seu login</Text>
 
         <InputWrapper>
-          <Input 
-            placeholder="E-mail"
-            type="text"
-            icon={FiMail}
-          />
+          <Input placeholder="E-mail" type="text" icon={FiMail} />
 
-          <Input 
-            placeholder="Senha"
-            type="password"
-            icon={FiLock}
-          />
+          <Input placeholder="Senha" type="password" icon={FiLock} />
         </InputWrapper>
 
         <Button title="Entrar" />
-        <ButtonText  title="Criar conta"/> 
+        <ButtonText title="Criar conta" to="/register" />
       </Form>
 
       <Background />
-
     </Container>
   );
 }
