@@ -17,10 +17,31 @@ import { ButtonText } from "../../components/ButtonText";
 import { FiUser, FiMail, FiLock } from "react-icons/fi";
 import { GoArrowLeft } from "react-icons/go";
 
+import { api } from "../../services/api";
+
 export function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  function handleSignUp() {
+    if (!name || !email || !password) {
+      return alert("Preencha todos os campos!");
+    }
+
+    api
+      .post("/users", { name, email, password })
+      .then(() => {
+        alert("Usuário cadastrado com sucesso!");
+      })
+      .catch((error) => {
+        if (error.response) {
+          alert(error.response.data.message);
+        } else {
+          alert("Não foi possivel cadastrar");
+        }
+      });
+  }
 
   return (
     <Container>
@@ -53,7 +74,7 @@ export function SignUp() {
           />
         </InputWrapper>
 
-        <Button title="Entrar" />
+        <Button title="Cadastrar" onClick={handleSignUp} />
         <ButtonText title="Voltar para login" icon={GoArrowLeft} to="/" />
       </Form>
 
