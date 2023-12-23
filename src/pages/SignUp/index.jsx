@@ -18,6 +18,10 @@ import { FiUser, FiMail, FiLock } from "react-icons/fi";
 import { GoArrowLeft } from "react-icons/go";
 
 export function SignUp() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <Container>
       <Form>
