@@ -25,6 +25,8 @@ export function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
+
   function handleSignUp() {
     if (!name || !email || !password) {
       return alert("Preencha todos os campos!");
@@ -34,6 +36,7 @@ export function SignUp() {
       .post("/users", { name, email, password })
       .then(() => {
         alert("Usuário cadastrado com sucesso!");
+        navigate("/");
       })
       .catch((error) => {
         if (error.response) {
