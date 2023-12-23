@@ -31,11 +31,26 @@ export function SignUp() {
         <Text>Faça seu login</Text>
 
         <InputWrapper>
-          <Input placeholder="Nome" type="text" icon={FiUser} />
+          <Input
+            placeholder="Nome"
+            type="text"
+            icon={FiUser}
+            onChange={(e) => setName(e.target.value)}
+          />
 
-          <Input placeholder="E-mail" type="text" icon={FiMail} />
+          <Input
+            placeholder="E-mail"
+            type="text"
+            icon={FiMail}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-          <Input placeholder="Senha" type="password" icon={FiLock} />
+          <Input
+            placeholder="Senha"
+            type="password"
+            icon={FiLock}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </InputWrapper>
 
         <Button title="Entrar" />
