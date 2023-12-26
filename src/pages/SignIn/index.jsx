@@ -24,6 +24,10 @@ export function SignIn() {
 
   const { signIn } = useAuth();
 
+  function handleSignIn() {
+    signIn({ email, password });
+  }
+
   return (
     <Container>
       <Form>
@@ -48,7 +52,7 @@ export function SignIn() {
           />
         </InputWrapper>
 
-        <Button title="Entrar" />
+        <Button title="Entrar" onClick={handleSignIn} />
         <ButtonText title="Criar conta" to="/register" />
       </Form>
 
