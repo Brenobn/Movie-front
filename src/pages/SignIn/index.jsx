@@ -17,8 +17,7 @@ import { useAuth } from "../../hooks/auth";
 import { FiMail, FiLock } from "react-icons/fi";
 
 export function SignIn() {
-  const data = useAuth();
-  console.log("MEU CONTEXTO =>", data);
+  const { signIn } = useAuth();
 
   return (
     <Container>
