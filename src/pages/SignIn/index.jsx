@@ -12,9 +12,14 @@ import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { ButtonText } from "../../components/ButtonText";
 
+import { useAuth } from "../../hooks/auth";
+
 import { FiMail, FiLock } from "react-icons/fi";
 
 export function SignIn() {
+  const data = useAuth();
+  console.log("MEU CONTEXTO =>", data);
+
   return (
     <Container>
       <Form>
