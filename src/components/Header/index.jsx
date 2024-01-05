@@ -1,3 +1,5 @@
+import { useAuth } from "../../hooks/auth";
+
 import {
   Container,
   Profile,
@@ -12,6 +14,8 @@ import {
 import { Input } from "../Input";
 
 export function Header() {
+  const { signOut } = useAuth();
+
   return (
     <Container>
       <HeaderWrapper>
@@ -19,10 +23,10 @@ export function Header() {
 
         <Input placeholder="Pesquisar pelo título" />
 
-        <Profile to="/profile">
+        <Profile>
           <TextHeader>
-            <Name>Breno Braga</Name>
-            <LinkToGoOut href="#">sair</LinkToGoOut>
+            <Name to="/profile">Breno Braga</Name>
+            <LinkToGoOut onClick={signOut}>sair</LinkToGoOut>
           </TextHeader>
 
           <ProfileImg
