@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import { useAuth } from "../../hooks/auth";
+
 import { GoArrowLeft } from "react-icons/go";
 import { PiCamera } from "react-icons/pi";
 import { MdOutlinePersonOutline, MdOutlineMail } from "react-icons/md";
@@ -12,8 +14,10 @@ import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 
 export function Profile() {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
+  const { user } = useAuth();
+
+  const [name, setName] = useState(user.name);
+  const [email, setEmail] = useState(user.email);
   const [passwordOld, setPasswordOld] = useState();
   const [passwordNew, setPasswordNew] = useState();
 
