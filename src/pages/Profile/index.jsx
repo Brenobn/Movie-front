@@ -40,8 +40,18 @@ export function Profile() {
         </div>
       </Header>
       <form>
-        <Input icon={MdOutlinePersonOutline} placeholder="Nome" />
-        <Input icon={MdOutlineMail} placeholder="E-mail" />
+        <Input
+          placeholder="Nome"
+          type="text"
+          icon={MdOutlinePersonOutline}
+          value={name}
+        />
+        <Input
+          placeholder="E-mail"
+          type="text"
+          icon={MdOutlineMail}
+          value={email}
+        />
         <Input icon={HiOutlineLockClosed} placeholder="Senha atual" />
         <Input icon={HiOutlineLockClosed} placeholder="Nova senha" />
         <Button title="Salvar" />
