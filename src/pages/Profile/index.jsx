@@ -45,15 +45,27 @@ export function Profile() {
           type="text"
           icon={MdOutlinePersonOutline}
           value={name}
+          onChange={(e) => setName(e.target.value)}
         />
         <Input
           placeholder="E-mail"
           type="text"
           icon={MdOutlineMail}
           value={email}
+          onChange={(e) => setName(e.target.value)}
         />
-        <Input icon={HiOutlineLockClosed} placeholder="Senha atual" />
-        <Input icon={HiOutlineLockClosed} placeholder="Nova senha" />
+        <Input
+          placeholder="Senha atual"
+          type="password"
+          icon={HiOutlineLockClosed}
+          onChange={(e) => setPasswordOld(e.target.value)}
+        />
+        <Input
+          placeholder="Nova senha"
+          type="password"
+          icon={HiOutlineLockClosed}
+          onChange={(e) => setPasswordNew(e.target.value)}
+        />
         <Button title="Salvar" />
       </form>
     </Container>
