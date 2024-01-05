@@ -15,7 +15,8 @@ function AuthProvider({ children }) {
       localStorage.setItem("@movie-front:user", JSON.stringify(user));
       localStorage.setItem("@movie-front:token", token);
 
-      api.defaults.headers.authorization = `Bearer ${token}`;
+      api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+
       setData({ user, token });
     } catch (error) {
       if (error.response) {
@@ -38,7 +39,7 @@ function AuthProvider({ children }) {
     const user = localStorage.getItem("@movie-front:user");
 
     if (token && user) {
-      api.defaults.headers.authorization = `Bearer ${token}`;
+      api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
       setData({
         token,
