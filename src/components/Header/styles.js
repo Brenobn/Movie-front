@@ -41,7 +41,7 @@ export const TextHeader = styled.div`
   align-items: flex-end;
 `;
 
-export const Name = styled.strong`
+export const Name = styled(Link)`
   color: ${({ theme }) => theme.COLORS.WHITE};
   font-family: "Roboto Slab", sans-serif;
   font-size: 14px;
@@ -64,7 +64,7 @@ export const LinkToGoOut = styled.a`
   font-weight: 400;
 `;
 
-export const Profile = styled(Link)`
+export const Profile = styled.div`
   display: inline-flex;
   height: 68px;
   align-items: center;
