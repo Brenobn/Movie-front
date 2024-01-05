@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { GoArrowLeft } from "react-icons/go";
@@ -11,6 +12,11 @@ import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 
 export function Profile() {
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [passwordOld, setPasswordOld] = useState();
+  const [passwordNew, setPasswordNew] = useState();
+
   return (
     <Container>
       <Header>
