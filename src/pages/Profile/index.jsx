@@ -21,6 +21,17 @@ export function Profile() {
   const [passwordOld, setPasswordOld] = useState();
   const [passwordNew, setPasswordNew] = useState();
 
+  async function handleUpdate() {
+    const user = {
+      name,
+      email,
+      password: passwordNew,
+      old_password: passwordOld,
+    };
+
+    await updateProfile({ user });
+  }
+
   return (
     <Container>
       <Header>
@@ -66,7 +77,7 @@ export function Profile() {
           icon={HiOutlineLockClosed}
           onChange={(e) => setPasswordNew(e.target.value)}
         />
-        <Button title="Salvar" />
+        <Button title="Salvar" onClick={handleUpdate} />
       </form>
     </Container>
   );
