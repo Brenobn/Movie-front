@@ -21,6 +21,8 @@ export function Profile() {
   const [passwordOld, setPasswordOld] = useState();
   const [passwordNew, setPasswordNew] = useState();
 
+  const [avatar, setAvatar] = useState(null);
+
   async function handleUpdate() {
     const user = {
       name,
