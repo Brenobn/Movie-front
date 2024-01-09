@@ -47,9 +47,11 @@ export function Profile() {
             src="https://github.com/Brenobn.png"
             alt="foto de usuario do github"
           />
-          <div className="Icon">
+          <label htmlFor="picture">
             <PiCamera size={20} />
-          </div>
+
+            <input id="picture" type="file" />
+          </label>
         </div>
       </Header>
       <form>

@@ -64,7 +64,7 @@ export const Header = styled.header`
       position: relative;
     }
 
-    .Icon {
+    label {
       background-color: ${({ theme }) => theme.COLORS.SALMON};
       width: 48px;
       height: 48px;
@@ -73,10 +73,16 @@ export const Header = styled.header`
       border-radius: 50%;
       position: absolute;
 
+      cursor: pointer;
+
       > svg {
         flex-shrink: 0;
         color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
         margin: 14px 14px;
+      }
+
+      input {
+        display: none;
       }
     }
   }
