@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import { useAuth } from "../../hooks/auth";
 
+import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
+
 import { GoArrowLeft } from "react-icons/go";
 import { PiCamera } from "react-icons/pi";
 import { MdOutlinePersonOutline, MdOutlineMail } from "react-icons/md";
