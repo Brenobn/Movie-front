@@ -21,7 +21,8 @@ export function Profile() {
   const [passwordOld, setPasswordOld] = useState();
   const [passwordNew, setPasswordNew] = useState();
 
-  const [avatar, setAvatar] = useState(null);
+  const [avatar, setAvatar] = useState(user.avatar);
+  const [avatarFile, setAvatarFile] = useState(null);
 
   async function handleUpdate() {
     const user = {
@@ -34,6 +35,14 @@ export function Profile() {
     await updateProfile({ user });
   }
 
+  function handleChangeAvatar(event) {
+    const file = event.target.files[0];
+    setAvatarFile(file);
+
+    const imagePreview = URL.createObjectURL(file);
+    setAvatar(imagePreview);
+  }
+
   return (
     <Container>
       <Header>
@@ -43,14 +52,11 @@ export function Profile() {
         </div>
 
         <div className="Picture">
-          <img
-            src="https://github.com/Brenobn.png"
-            alt="foto de usuario do github"
-          />
+          <img src={avatar} alt="foto de usuario do github" />
           <label htmlFor="picture">
             <PiCamera size={20} />
 
-            <input id="picture" type="file" />
+            <input id="picture" type="file" onChange={handleChangeAvatar} />
           </label>
         </div>
       </Header>
