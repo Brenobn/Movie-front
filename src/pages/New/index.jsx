@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { GoArrowLeft, GoPlus } from "react-icons/go";
@@ -19,6 +20,8 @@ import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 
 export function New() {
+  const [tags, setTags] = useState([]);
+
   return (
     <Container>
       <Header />
