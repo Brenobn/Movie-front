@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { GoArrowLeft, GoPlus } from "react-icons/go";
-import { IoIosClose } from "react-icons/io";
+
+import { api } from "../../services/api";
 
 import {
   Container,
@@ -35,6 +36,17 @@ export function New() {
 
   function handleRemoveTag(deleted) {
     setTags((prevState) => prevState.filter((tag) => tag !== deleted));
+  }
+
+  async function handleNewMovie() {
+    await api.post("/movieNotes", {
+      title,
+      description,
+      rating,
+      tags,
+    });
+
+    alert("Filme cadastrado com sucesso!");
   }
 
   return (
