@@ -18,9 +18,16 @@ import {
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
+import { NoteItem } from "../../components/NoteItem";
 
 export function New() {
   const [tags, setTags] = useState([]);
+  const [newTag, setNewTag] = useState("");
+
+  function handleAddTag() {
+    setTags((prevState) => [...prevState, newTag]);
+    setNewTag("");
+  }
 
   return (
     <Container>
@@ -39,14 +46,8 @@ export function New() {
         <Section>
           <h4>Marcadores</h4>
           <Children>
-            <button>
-              React
-              <IoIosClose size={24} />
-            </button>
-            <button>
-              Novo marcador
-              <GoPlus />
-            </button>
+            <NoteItem value="Ação" />
+            <NoteItem isNew placeholder="Novo marcador" />
           </Children>
         </Section>
         <Buttons>
