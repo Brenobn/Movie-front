@@ -46,8 +46,13 @@ export function New() {
         <Section>
           <h4>Marcadores</h4>
           <Children>
-            <NoteItem value="Ação" />
-            <NoteItem isNew placeholder="Novo marcador" />
+            <NoteItem
+              isNew
+              placeholder="Novo marcador"
+              value={newTag}
+              onChange={(e) => setNewTag(e.target.value)}
+              onClick={handleAddTag}
+            />
           </Children>
         </Section>
         <Buttons>
