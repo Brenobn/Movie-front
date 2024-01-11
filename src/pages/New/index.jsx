@@ -46,6 +46,9 @@ export function New() {
         <Section>
           <h4>Marcadores</h4>
           <Children>
+            {tags.map((tag, index) => (
+              <NoteItem key={String(index)} value={tag} onClick={() => {}} />
+            ))}
             <NoteItem
               isNew
               placeholder="Novo marcador"
