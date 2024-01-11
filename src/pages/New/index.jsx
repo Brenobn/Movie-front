@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import { useNavigate } from "react-router-dom";
+
 import { GoArrowLeft, GoPlus } from "react-icons/go";
 
 import { api } from "../../services/api";
@@ -29,6 +31,8 @@ export function New() {
   const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState("");
 
+  const navigate = useNavigate();
+
   function handleAddTag() {
     setTags((prevState) => [...prevState, newTag]);
     setNewTag("");
@@ -47,6 +51,7 @@ export function New() {
     });
 
     alert("Filme cadastrado com sucesso!");
+    navigate("/");
   }
 
   return (
@@ -93,7 +98,7 @@ export function New() {
         </Section>
         <Buttons>
           <Button title="Excluir filme" />
-          <Button title="Salvar alterações" />
+          <Button title="Salvar alterações" onClick={handleNewMovie} />
         </Buttons>
       </ContentContainer>
     </Container>
