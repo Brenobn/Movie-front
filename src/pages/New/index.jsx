@@ -47,6 +47,10 @@ export function New() {
       return alert("Digite o título do filme.");
     }
 
+    if (!rating) {
+      return alert("De uma nota ao filme.");
+    }
+
     if (newTag) {
       return alert(
         "Você esqueceu de adicionar uma tag! Adicione a tag ou deixe o campo vazio.",
