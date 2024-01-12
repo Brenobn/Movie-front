@@ -16,7 +16,7 @@ import {
 
 import { Input } from "../Input";
 
-export function Header() {
+export function Header({ handleChange }) {
   const { signOut, user } = useAuth();
 
   const avatarUrl = user.avatar
@@ -28,7 +28,10 @@ export function Header() {
       <HeaderWrapper>
         <Text>RocketMovies</Text>
 
-        <Input placeholder="Pesquisar pelo título" />
+        <Input
+          placeholder="Pesquisar pelo título"
+          onChange={(e) => handleChange(e.target.value)}
+        />
 
         <Profile>
           <TextHeader>
