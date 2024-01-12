@@ -43,6 +43,10 @@ export function New() {
   }
 
   async function handleNewMovie() {
+    if (!title) {
+      return alert("Digite o título do filme.");
+    }
+
     if (newTag) {
       return alert(
         "Você esqueceu de adicionar uma tag! Adicione a tag ou deixe o campo vazio.",
