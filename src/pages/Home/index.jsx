@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   Container,
   Content,
@@ -15,6 +17,9 @@ import { Section } from "../../components/Section";
 import { Tag } from "../../components/Tag";
 
 export function Home() {
+  const [search, setSearch] = useState("");
+  const [movies, setMovies] = useState([]);
+
   return (
     <Container>
       <Header />
