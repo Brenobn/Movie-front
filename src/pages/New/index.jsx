@@ -43,6 +43,12 @@ export function New() {
   }
 
   async function handleNewMovie() {
+    if (newTag) {
+      return alert(
+        "Você esqueceu de adicionar uma tag! Adicione a tag ou deixe o campo vazio.",
+      );
+    }
+
     await api.post("/movieNotes", {
       title,
       description,
