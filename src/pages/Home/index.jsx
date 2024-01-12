@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import {
   Container,
@@ -12,6 +12,8 @@ import {
 
 import { FiPlus } from "react-icons/fi";
 
+import { api } from "../../services/api";
+
 import { Header } from "../../components/Header";
 import { Section } from "../../components/Section";
 import { Tag } from "../../components/Tag";
@@ -20,9 +22,22 @@ export function Home() {
   const [search, setSearch] = useState("");
   const [movies, setMovies] = useState([]);
 
+  function handleChangeSearch(value) {
+    setSearch(value);
+  }
+
+  useEffect(() => {
+    async function fetchMovies() {
+      const response = await api.get(`/movieNotes?title=${search}`);
+      setMovies(response.data);
+    }
+
+    fetchMovies();
+  }, [search]);
+
   return (
     <Container>
-      <Header />
+      <Header handleChange={handleChangeSearch} />
       <main>
         <Content>
           <HeadOfPage>
