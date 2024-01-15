@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import {
   Container,
@@ -22,8 +23,14 @@ export function Home() {
   const [search, setSearch] = useState("");
   const [movies, setMovies] = useState([]);
 
+  const navigate = useNavigate();
+
   function handleChangeSearch(value) {
     setSearch(value);
+  }
+
+  function handleDetails(id) {
+    navigate(`/details/${id}`);
   }
 
   useEffect(() => {
