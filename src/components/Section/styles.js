@@ -24,28 +24,9 @@ export const Title = styled.h2`
 
 export const Stars = styled.div`
   display: flex;
-  flex-direction: row;
   gap: 6px;
 
-  > svg:nth-child(1) {
-    color: ${({ theme }) => theme.COLORS.SALMON};
-  }
-
-  > svg:nth-child(2) {
-    color: ${({ theme }) => theme.COLORS.SALMON};
-  }
-
-  > svg:nth-child(3) {
-    color: ${({ theme }) => theme.COLORS.SALMON};
-  }
-
-  > svg:nth-child(4) {
-    color: ${({ theme }) => theme.COLORS.SALMON};
-  }
-
-  > svg:nth-child(5) {
-    color: ${({ theme }) => theme.COLORS.SALMON};
-  }
+  color: ${({ theme }) => theme.COLORS.SALMON};
 `;
 
 export const Paragraph = styled.p`
