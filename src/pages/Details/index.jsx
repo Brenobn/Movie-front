@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { GoArrowLeft } from "react-icons/go";
 import { MdStar, MdStarBorder } from "react-icons/md";
 
@@ -16,6 +17,8 @@ import { Tag } from "../../components/Tag";
 import { ButtonText } from "../../components/ButtonText";
 
 export function Details() {
+  const [data, setData] = useState(null);
+
   return (
     <Container>
       <Header />
