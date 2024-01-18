@@ -21,20 +21,3 @@ export const Title = styled.h2`
   font-size: 24px;
   font-weight: 700;
 `;
-
-export const Stars = styled.div`
-  display: flex;
-  gap: 6px;
-
-  color: ${({ theme }) => theme.COLORS.SALMON};
-`;
-
-export const Paragraph = styled.p`
-  color: ${({ theme }) => theme.COLORS.GRAY_300};
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-`;
