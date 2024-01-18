@@ -9,6 +9,7 @@ import {
   HeadOfPage,
   Title,
   TagsWrapper,
+  Paragraph,
 } from "./styles";
 
 import { FiPlus } from "react-icons/fi";
@@ -18,6 +19,7 @@ import { api } from "../../services/api";
 import { Header } from "../../components/Header";
 import { Section } from "../../components/Section";
 import { Tag } from "../../components/Tag";
+import { StarRating } from "../../components/StarRating";
 
 export function Home() {
   const [search, setSearch] = useState("");
@@ -59,7 +61,9 @@ export function Home() {
           {movies.map((movie, index) => {
             return (
               <Sections key={index} onClick={() => handleDetails(movie.id)}>
-                <Section title={movie.title} description={movie.description}>
+                <Section title={movie.title}>
+                  <StarRating numStar={movie.rating} />
+                  <Paragraph>{movie.description}</Paragraph>
                   <TagsWrapper>
                     <Tag text="Ação" />
                     <Tag text="Aventura" />
