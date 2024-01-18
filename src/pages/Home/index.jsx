@@ -65,9 +65,9 @@ export function Home() {
                   <StarRating numStar={movie.rating} />
                   <Paragraph>{movie.description}</Paragraph>
                   <TagsWrapper>
-                    <Tag text="Ação" />
-                    <Tag text="Aventura" />
-                    <Tag text="Romance" />
+                    {movie.tags.map((tag, tagIndex) => (
+                      <Tag key={tagIndex} text={tag.name} />
+                    ))}
                   </TagsWrapper>
                 </Section>
               </Sections>
