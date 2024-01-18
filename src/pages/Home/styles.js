@@ -84,3 +84,13 @@ export const ButtonHome = styled(Link)`
     opacity: 0.5;
   }
 `;
+
+export const Paragraph = styled.p`
+  color: ${({ theme }) => theme.COLORS.GRAY_300};
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
