@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { GoArrowLeft } from "react-icons/go";
 import { MdStar, MdStarBorder } from "react-icons/md";
+
+import { api } from "../../services/api";
 
 import {
   Container,
@@ -18,6 +21,17 @@ import { ButtonText } from "../../components/ButtonText";
 
 export function Details() {
   const [data, setData] = useState(null);
+
+  const params = useParams();
+
+  useEffect(() => {
+    async function fetchMovies() {
+      const response = await api.get(`/movieNotes/${params.id}`);
+      setData(response.data);
+    }
+
+    fetchMovies();
+  }, []);
 
   return (
     <Container>
